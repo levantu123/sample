@@ -1,0 +1,41 @@
+<div class="container emp-profile">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="profile-img">
+                <img src="../../../../assets/img/target.png" alt="" />
+            </div>
+            <div class="btn-controls">
+                <button mat-flat-button color="primary" (click)="openAddGoalDialog()">Add goal</button>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="profile-head">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            aria-controls="home" aria-selected="true">Goals</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div *ngFor="let goal of goals" class="row goal">
+                                <div class="col-md-4">
+                                    <label class="goal-name">{{ goal.name }}</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <span>${{ goal.initialValue }} / ${{ goal.goalValue }}</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span>Until {{ goal.endingDate }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

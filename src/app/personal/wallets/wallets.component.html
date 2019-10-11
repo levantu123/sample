@@ -1,0 +1,8 @@
+<div class="wallets">
+    <div class="wallet-container" *ngFor="let wallet of wallets">
+        <div class="wallet-infor"><a routerLink="/wallets/id"><span style="width: 50px;"><i class="fa fa-money"></i> </span> ${{ wallet.currentAmount }}<span> {{ wallet.name }}</span></a></div>
+    </div>
+</div>
+<div class="wallet-controller">
+    <a class="add-button" href="javascript:;" (click)="openBottomSheet()"><i class="fa fa-plus-circle fa-4x" aria-hidden="true"></i></a>
+</div>

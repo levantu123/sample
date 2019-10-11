@@ -1,0 +1,56 @@
+nav{
+    display: inline-block;
+}
+.date-number{
+    font-size: 55px;
+    width: 150px;
+}
+img{
+    width: 60px;
+    display: inline-block;
+}
+.date-overview{
+    border-bottom: solid 1px #00000042;
+}
+.money-amount{
+    padding: 10px;
+    font-size: 20px;
+}
+.date-title{
+    width: 200px;
+}
+.report-label{
+    width: 200px;
+    display: inline-block;
+}
+.overview{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #0f0d0d61;
+}
+.detail{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.transaction-icon{
+    width: 70px;
+}
+.transaction-title{
+    width: 200px;
+    vertical-align: super;
+    padding: 5px;
+}
+.transaction-title div{
+    font-weight: bold;
+}
+.transaction-container{
+    border-bottom: solid 1px #0f0d0d61;
+    width: calc(100% - 20px);
+    margin: 0;
+}
+.btn-controls button{
+    margin-right: 20px;
+}
+.btn-controls{
+    padding-top: 30px;
+}

@@ -1,0 +1,95 @@
+<div class="container emp-profile">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="profile-img">
+                <img src="../../../assets/img/profile.png" alt=""/>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="profile-head">
+                <h5>
+                    {{ userDetail.last_name }} {{ userDetail.first_name }}
+                </h5>
+                <h6>
+                    {{ userDetail.customer_id }}
+                </h6>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            aria-controls="home" aria-selected="true">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                            aria-controls="profile" aria-selected="false">Accounts</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>User Id</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ userDetail.customer_id }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ userDetail.last_name }} {{ userDetail.first_name }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ userDetail.email }}</p>
+                                </div>
+                            </div>
+                            <div *ngFor="let phone of userDetail.phone_numbers" class="row">
+                                <div class="col-md-6">
+                                    <label>Phone</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ phone.number }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Birth date</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ userDetail.birth_date }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Nationality</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{ userDetail.nationality }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div *ngFor="let account of accounts" class="row">
+                                <div class="col-md-6">
+                                    <label>{{ account.major_category }}</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>${{ account.current_balance.num }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

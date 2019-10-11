@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+    <p>Add basic wallet</p>
+    <mat-form-field>
+        <input matInput #ctrl="ngModel" [(ngModel)]="invest.name" placeholder="Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput #ctrl="ngModel" type="number" [(ngModel)]="invest.limitAmount" placeholder="Limit amount">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput #ctrl="ngModel" type="number" [(ngModel)]="invest.issuedPerious" placeholder="Issued Perious">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput #ctrl="ngModel" type="number" [(ngModel)]="invest.profitRate" placeholder="Profit Rate">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="invest" cdkFocusInitial>Ok</button>
+  </div>

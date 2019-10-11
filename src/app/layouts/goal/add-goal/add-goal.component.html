@@ -1,0 +1,21 @@
+<div mat-dialog-content>
+    <p>Add basic wallet</p>
+    <mat-form-field>
+        <input matInput #ctrl="ngModel" [(ngModel)]="goal.name" placeholder="Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput #ctrl="ngModel" type="number" [(ngModel)]="goal.goalValue" placeholder="Goal value">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput #ctrl="ngModel" type="number" [(ngModel)]="goal.initialValue" placeholder="Initial value">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput #ctrl="ngModel" [matDatepicker]="endingDate" [(ngModel)]="goal.endingDate" placeholder="Ending Date">
+        <mat-datepicker-toggle matSuffix [for]="endingDate"></mat-datepicker-toggle>
+        <mat-datepicker #endingDate></mat-datepicker>
+      </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="goal" cdkFocusInitial>Ok</button>
+  </div>

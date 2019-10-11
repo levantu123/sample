@@ -1,0 +1,23 @@
+.wallet-container {
+  padding: 5px;
+  width: 100%;
+  margin: 2px;
+  background-color: aliceblue;
+}
+.add-button {
+  margin: auto;
+  display: block;
+  width: fit-content;
+}
+.wallet-controller {
+  width: 100%;
+  margin: 2px;
+  bottom: 50px;
+  position: absolute;
+}
+.wallets {
+  margin: auto;
+}
+.wallet-infor {
+  padding: 5px;
+}
